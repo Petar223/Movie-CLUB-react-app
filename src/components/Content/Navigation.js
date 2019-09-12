@@ -1,25 +1,14 @@
 import React, { Component } from "react";
 
 class Navigation extends Component {
-  state = {
-    className: "side-nav__button",
-    film: "film",
-    tv: "tv",
-    favorites: "favorites"
-  };
-  changeClass = () => {
-    this.setState({
-      className: "side-nav__button-active"
-    });
-  };
   render() {
     return (
       <nav className="sidebar">
         <ul className="side-nav">
           <li className="side-nav__item">
             <button
-              id={this.state.film}
-              className={this.state.className}
+              id="film"
+              className="side-nav__button"
               onClick={this.changeClass}
             >
               <i className="fas fa-film"></i>
@@ -27,14 +16,14 @@ class Navigation extends Component {
             </button>
           </li>
           <li className="side-nav__item">
-            <button id={this.state.tv} className={this.state.className}>
+            <button id="tv" className="side-nav__button">
               <i className="fas fa-tv"></i>
               <span>TV Shows</span>
             </button>
           </li>
 
           <li className="side-nav__item">
-            <button id={this.state.favorites} className={this.state.className}>
+            <button id="favorites" className="side-nav__button">
               <i className="fas fa-heart"></i>
               <span>Favorites</span>
             </button>
