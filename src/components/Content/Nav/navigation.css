@@ -1,0 +1,120 @@
+/* ================SIDE NAVIGATION========================= */
+
+.side-nav {
+    font-size: 1.4rem;
+    list-style: none;
+    margin-top: 3.5rem;
+}
+
+.side-nav__item {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.side-nav__button {
+    color: rgba(151, 151, 151, 0.7);
+    text-transform: uppercase;
+    display: block;
+    padding: 1.5rem 3rem;
+    background: none;
+    border: none;
+    width: 100%;
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-start;
+    outline: none;
+}
+
+#film,
+#tv {
+    color: rgba(151, 151, 151, 0.7);
+}
+
+.side-nav__button-active {
+    color: rgb(241, 198, 7);
+    background-color: rgb(4, 4, 24);
+    text-transform: uppercase;
+    display: block;
+    padding: 1.5rem 3rem;
+    outline: none;
+    border: none;
+    width: 100%;
+    transform: scaleY(1);
+    display: flex;
+    justify-content: flex-start;
+}
+
+#film-active {
+    color: rgba(247, 47, 47, 0.664);
+    background-color: rgb(4, 4, 24);
+}
+
+#tv-active {
+    color: rgb(68, 68, 247);
+    background-color: rgb(4, 4, 24);
+}
+
+#film:hover {
+    color: rgba(247, 47, 47, 0.664);
+    background-color: rgb(4, 4, 24)
+}
+
+#tv:hover {
+    color: rgb(68, 68, 247);
+    background-color: rgb(4, 4, 24)
+}
+
+.side-nav__button:hover,
+#favorites:hover {
+    color: rgb(241, 198, 7);
+    background-color: rgb(4, 4, 24)
+}
+
+#film::before,
+#film-active::before {
+    background-color: rgba(247, 47, 47, 0.664);
+}
+
+#tv::before,
+#tv-active::before {
+    background-color: rgb(68, 68, 247);
+}
+
+.side-nav__button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 5px;
+    background-color: rgb(241, 198, 7);
+    transform: scaleY(0);
+    transition: transform .5s;
+}
+
+.side-nav__button-active::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 5px;
+    background-color: rgb(241, 198, 7);
+    transform: scaleY(1);
+}
+
+.side-nav__button:hover::before {
+    transform: scaleY(1);
+}
+
+.fas {
+    margin-right: 2rem;
+}
+
+/* ================LEGAL=========================== */
+
+.legal {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 2.5rem;
+}
