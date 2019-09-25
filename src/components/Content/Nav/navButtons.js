@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./navigation.css";
 
 const SideNavItems = () => {
   const buttons = [
@@ -43,11 +42,6 @@ const SideNavItems = () => {
     });
   };
 
-  return (
-    <div>
-      {showItems()}
-      <div class="legal">&copy; 2019 by Petruska.</div>
-    </div>
-  );
+  return <div>{showItems()}</div>;
 };
 export default SideNavItems;

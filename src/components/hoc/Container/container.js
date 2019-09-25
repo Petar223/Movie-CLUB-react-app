@@ -4,7 +4,7 @@ import "./header.css";
 import logoImage from "./img/film-logo-4.png";
 import userImage from "./img/face-holder.png";
 //Components
-import Content from "../../Content/content";
+import Content from "../../../content";
 
 class Container extends Component {
   state = {
