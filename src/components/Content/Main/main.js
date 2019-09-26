@@ -9,7 +9,7 @@ import Favorites from "../../Fav/fav";
 
 const Main = () => {
   return (
-    <main class="poster-view">
+    <main className="poster-view">
       <Switch>
         <Route path="/" exact component={Movie} />
         <Route path="/tv" component={TvShows} />

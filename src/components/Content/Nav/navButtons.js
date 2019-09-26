@@ -32,9 +32,9 @@ const SideNavItems = () => {
   const showItems = () => {
     return buttons.map((item, i) => {
       return (
-        <li key={i} class={item.type}>
-          <Link to={item.link} id={item.id} class={item.buttonClass}>
-            <i class={item.icon}></i>
+        <li key={i} className={item.type}>
+          <Link to={item.link} id={item.id} className={item.buttonClass}>
+            <i className={item.icon}></i>
             <span>{item.text}</span>
           </Link>
         </li>

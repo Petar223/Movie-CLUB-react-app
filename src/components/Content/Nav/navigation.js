@@ -5,11 +5,11 @@ import React from "react";
 import SideNavItems from "./navButtons";
 const Navigation = () => {
   return (
-    <nav class="sidebar">
-      <ul class="side-nav">
+    <nav className="sidebar">
+      <ul className="side-nav">
         <SideNavItems />
       </ul>
-      <div class="legal">&copy; 2019 by Petruska.</div>
+      <div className="legal">&copy; 2019 by Petruska.</div>
     </nav>
   );
 };

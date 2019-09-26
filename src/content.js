@@ -6,7 +6,7 @@ import Main from "./components/Content/Main/main";
 class Content extends Component {
   render() {
     return (
-      <div class="content">
+      <div className="content">
         <Navigation>
           <NavButtons />
         </Navigation>
