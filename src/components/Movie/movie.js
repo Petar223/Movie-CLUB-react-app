@@ -4,7 +4,7 @@ import Posters from "../Posters/posters";
 const Movie = () => {
   return (
     <React.Fragment>
-      <Posters type="movie" page="1" />
+      <Posters type="movie" page={1} />
     </React.Fragment>
   );
 };

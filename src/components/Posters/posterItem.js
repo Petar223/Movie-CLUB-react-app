@@ -1,6 +1,6 @@
 import React from "react";
 import { IMAGE_PATH } from "../../config";
-import "./poster.css";
+import "./pageControl.css";
 const PosterItem = props => {
   const createPosters = () => {
     return props.data.map((item, i) => {
@@ -25,6 +25,7 @@ const PosterItem = props => {
       );
     });
   };
+
   return <React.Fragment>{createPosters()}</React.Fragment>;
 };
 
