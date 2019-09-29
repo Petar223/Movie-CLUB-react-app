@@ -7,11 +7,11 @@ import Movie from "../../Movie/movie";
 import TvShows from "../../Tv/tv";
 import Favorites from "../../Fav/fav";
 
-const Main = () => {
+const Main = props => {
   return (
     <main className="poster-view">
       <Switch>
-        <Route path="/" exact component={Movie} />
+        <Route path="/" exact component={() => <Movie input={props.input} />} />
         <Route path="/tv" component={TvShows} />
         <Route path="/favorites" component={Favorites} />
       </Switch>

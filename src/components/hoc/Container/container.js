@@ -16,7 +16,7 @@ class Container extends Component {
     });
   };
   render() {
-    console.log(this.state.inputValue);
+    // console.log(this.state.inputValue);
     return (
       <div className="container">
         <header className="header">
@@ -42,8 +42,7 @@ class Container extends Component {
             <span className="user-nav__surname">Surname</span>
           </nav>
         </header>
-        <Content />
-        {/* <PageCounter /> */}
+        <Content input={this.state.inputValue} />
       </div>
     );
   }

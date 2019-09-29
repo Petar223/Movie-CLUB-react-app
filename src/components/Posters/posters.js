@@ -13,16 +13,29 @@ class Posters extends Component {
   }
 
   request = page => {
-    return axios
-      .get(
-        `${URL}${this.props.type}/top_rated?api_key=${API_KEY}&language=en-US&page=${page}`
-      )
-      .then(response => {
-        this.setState({
-          movies: response.data.results,
-          data: response.data
+    if (this.props.input === "") {
+      return axios
+        .get(
+          `${URL}${this.props.type}/top_rated?api_key=${API_KEY}&language=en-US&page=${page}`
+        )
+        .then(response => {
+          this.setState({
+            movies: response.data.results,
+            data: response.data
+          });
         });
-      });
+    } else {
+      return axios
+        .get(
+          ` ${URL}search/${this.props.type}?api_key=${API_KEY}&query=${this.props.input}&page=${page}`
+        )
+        .then(response => {
+          this.setState({
+            movies: response.data.results,
+            data: response.data
+          });
+        });
+    }
   };
 
   pageControl = () => {
@@ -97,6 +110,7 @@ class Posters extends Component {
     }
   };
   render() {
+    console.log(this.props.input);
     return (
       <React.Fragment>
         <PosterItem data={this.state.movies} />
