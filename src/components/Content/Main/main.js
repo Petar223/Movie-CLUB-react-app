@@ -12,7 +12,7 @@ const Main = props => {
     <main className="poster-view">
       <Switch>
         <Route path="/" exact component={() => <Movie input={props.input} />} />
-        <Route path="/tv" component={TvShows} />
+        <Route path="/tv" component={() => <TvShows input={props.input} />} />
         <Route path="/favorites" component={Favorites} />
       </Switch>
     </main>

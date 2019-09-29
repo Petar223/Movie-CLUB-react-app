@@ -5,7 +5,7 @@ import PosterItem from "./posterItem";
 
 class Posters extends Component {
   state = {
-    movies: [],
+    shows: [],
     data: {}
   };
   UNSAFE_componentWillMount() {
@@ -20,7 +20,7 @@ class Posters extends Component {
         )
         .then(response => {
           this.setState({
-            movies: response.data.results,
+            shows: response.data.results,
             data: response.data
           });
         });
@@ -31,7 +31,7 @@ class Posters extends Component {
         )
         .then(response => {
           this.setState({
-            movies: response.data.results,
+            shows: response.data.results,
             data: response.data
           });
         });
@@ -110,10 +110,10 @@ class Posters extends Component {
     }
   };
   render() {
-    console.log(this.props.input);
+    console.log(this.state.shows);
     return (
       <React.Fragment>
-        <PosterItem data={this.state.movies} />
+        <PosterItem data={this.state.shows} />
         {this.pageControl()}
       </React.Fragment>
     );

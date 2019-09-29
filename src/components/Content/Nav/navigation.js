@@ -1,7 +1,5 @@
 import React from "react";
 
-// import "./navigation.css";
-
 import SideNavItems from "./navButtons";
 const Navigation = () => {
   return (

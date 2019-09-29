@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "./components/Content/Nav/navigation.css";
 import NavButtons from "./components/Content/Nav/navButtons";
 import Navigation from "./components/Content/Nav/navigation";
