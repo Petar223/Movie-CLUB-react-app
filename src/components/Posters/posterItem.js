@@ -32,6 +32,17 @@ const PosterItem = props => {
     }
   };
 
+  const favorite = item => {
+    let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    console.log(item);
+    favorites.push(item);
+    const favorite = Array.from(new Set(favorites.map(a => a.id))).map(id => {
+      return favorites.find(a => a.id === id);
+    });
+    let stringifyFavorite = JSON.stringify(favorite);
+    localStorage.setItem("favorites", stringifyFavorite);
+  };
+
   const createPosters = () => {
     return props.data.map((item, i) => {
       return (
@@ -43,7 +54,14 @@ const PosterItem = props => {
             <p className="year">{release(item)}</p>
             <p className="rating">Rating:</p>
             <p className="mark">{item.vote_average} / 10</p>
-            <button className="container-btn">F A V O R I T E</button>
+            <button
+              className="container-btn"
+              onClick={() => {
+                favorite(item);
+              }}
+            >
+              F A V O R I T E
+            </button>
           </div>
         </div>
       );

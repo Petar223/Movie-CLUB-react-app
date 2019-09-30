@@ -29,6 +29,7 @@
     border: none;
     color: rgb(177, 177, 177);
     outline: none;
+    cursor: pointer;
 }
 
 #next-page:hover,
